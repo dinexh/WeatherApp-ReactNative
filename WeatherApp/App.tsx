@@ -1,39 +1,65 @@
-import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 const App = () => {
-  const handlePress = () => {
-    alert('Button clicked!');
-  };
-
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Welcome to My First App</Text>
-      <Text style={styles.subheading}>This is a React Native app</Text>
-      <Button title="Click Me" onPress={handlePress} />
+      <View style={styles.header}>
+        <Text style={styles.heading}>Welcome to my app!</Text>
+      </View>
+      <View style={styles.body}>
+        <Text style={styles.bodyText}>This is the body of my app!</Text>
+      </View>
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>Designed and Developed by Dinesh korukonda</Text>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: 'black',
+  },
+  header: {
     width: "100%",
-    height: "100%",
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'blue',
-    color: 'white',
   },
   heading: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
     color: 'white',
-  },  
-  subheading: {
+    textAlign: 'center',
+  },
+  body: {
+    width: "100%",
+    flex: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+  },
+  bodyText: {
     fontSize: 16,
-    marginBottom: 20,
     color: 'white',
+    textAlign: 'center',
+  },
+  footer: {
+    width: "100%",
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+    borderTopWidth: 1,
+    borderTopColor: 'white',
+  },
+  footerText: {
+    fontSize: 16,
+    color: 'white',
+    textAlign: 'center',
   },
 });
 
